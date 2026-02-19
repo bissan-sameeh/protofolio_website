@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="512" height="512" rx="100" fill="#050505"/>
+  
+  <!-- Outer Glow Circle -->
+  <circle cx="256" cy="256" r="230" stroke="#00B0FF" stroke-width="10" fill="none" opacity="0.5" />
+  
+  <!-- BQ Monogram -->
+  <text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" 
+        font-family="Arial, sans-serif" font-weight="900" font-size="280" 
+        fill="#00B0FF" filter="url(#neon-glow)" style="letter-spacing: -10px;">
+    BQ
+  </text>
+</svg>

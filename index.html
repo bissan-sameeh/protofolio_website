@@ -3,187 +3,301 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Bissan Qwaider | Flutter Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description"
+        content="Portfolio of Bissan Sameeh Qwaider, a Flutter Developer specializing in high-performance, cross-platform applications.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Bissan Qwaider</title>
 </head>
 
 <body>
+    <div class="grid-overlay"></div>
 
-    <header >
-        <a href="#" class="logo">Bissan Qwaider</a>
-        <nav class="navigation" >
-            <a href="#skills" >Skills</a>
-            <a href="https://drive.google.com/file/d/1q9khAbj4RR7I8wtFrr2Yf5gYxNda5kcF/view?usp=drivesdk" target="_blank">Resume</a>
-
-            <a href="#projects" >Projects</a>
-            <a href="#contact">Contact</a>
+    <header class="site-header">
+        <div class="logo">Bissan Qwaider <span class="blink">_</span></div>
+        <nav>
+            <a href="#work" data-link>WORK.dart</a>
+            <a href="#about" data-link>ABOUT.md</a>
+            <a href="#contact" data-link>CONTACT</a>
         </nav>
     </header>
 
-    <section class="main">
-        <div>
-            <h2>Hi there, I'm Bissan!<br><span>Flutter Developer from Gaza</span></h2>
-            <h3>I build clean, scalable, and responsive mobile apps</h3>
-            <p style="color: #888;">I graduated in 4.5 years with a GPA of 89.1 and trained at Gaza Sky Geeks and PITS. I'm passionate about Flutter and modern app development.</p>
-            <a href="#projects" class="main-btn">View my work</a>
-            <div class="social-icons">
-                <a href="https://linkedin.com/in/bissan-qwaider-691181233"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/eng.bissan_qwaider/"><i class="fab fa-instagram"></i></a>
-                <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
-            </div>
-        </div>
-    </section>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-layout">
+                    <div class="hero-text">
+                        <p class="overline">FLUTTER DEVELOPER</p>
+                        <h1 class="glitch-text" data-text="ARCHITECTING">ARCHITECTING</h1>
+                        <h1 class="glitch-text" data-text="PERFORMANCE">PERFORMANCE</h1>
 
-    <section class="cards" id="skills">
-        <h2 class="title">Technical Skills</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="info">
-                    <h3>Flutter & Dart</h3>
-                    <p>Advanced app development with Clean Architecture , Bloc , Cubit , Provider state Managment</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-database"></i>
-                </div>
-                <div class="info">
-                    <h3>Database</h3>
-                    <p>Hive (No Sql), SQLite, Firestore, Shared Preferences</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <div class="info">
-                    <h3>Tools & APIs</h3>
-                    <p>REST APIs, Dio, Http, Firebase, Google Maps, Localization</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-vials"></i>
-                </div>
-                <div class="info">
-                    <h3>Testing</h3>
-                    <p>Unit, Widget, and Integration Testing</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="projects" id="projects">
-        <h2 class="title">Projects</h2>
-        <div class="content">
-            <div class="project-card">
-                <div class="project-info">
-                    <img src="images/car.PNG"/>
+                        <div class="hero-cta">
+                            <a href="#work" class="btn-glow">VIEW PROJECTS</a>
+                            <a href="#contact" class="btn-minimal">CONTACT ME</a>
+                        </div>
+                    </div>
 
-                    <p class="project-category">Car Marketplace App</p>
-                    <strong class="project-title">
+                    <div class="hero-image-container">
+                        <!-- Placeholder for user photo - intended to be replaced -->
+                        <div class="hero-image-placeholder">
+                            <img src="profile.png" alt="Bissan Qwaider" id="profile-img">
+                            <div class="image-scanner"></div>
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-footer">
+                    <div class="stat-item">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-label">YEARS EXP</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">380+</span>
+                        <span class="stat-label">SCREENS CONVERTED</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">PIXEL PERFECT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section container">
+            <div class="section-header">
+                <h2>01. PROFILE</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="bio">
+                    <h3>BISSAN QWAIDER</h3>
+                    <p class="lead">Flutter Developer specialized in building scalable enterprise solutions.</p>
+                    <p>
+                        A software engineer with a rigorous intent on code quality. I bridge the gap between complex
+                        Figma designs and production-ready code.
+                        Expert in <strong>Clean Architecture</strong>, <strong>Bloc/Riverpod</strong> state management,
+                        and <strong>offline-first</strong> engineering.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Dart</span>
                         <span>Flutter</span>
-                        <a href="https://github.com/bissan-sameeh/car4sales" class="more-details" target="_blank">GitHub</a>
-                    </strong>
+                        <span>Firebase</span>
+                        <span>Clean Arch</span>
+                        <span>SOLID</span>
+                        <span>Git</span>
+                        <span>Figma</span>
+                        <span>Hive</span>
+                        <span>SQLite</span>
+                        <span>Localization</span>
+                        <span>Provider/Bloc</span>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <img src="images/words_app.PNG" />
 
-                    <p class="project-category">Words App</p>
-                    <strong class="project-title">
-                        <span>Flutter</span>
-                        <a href="https://github.com/bissan-sameeh/words" class="more-details" target="_blank">GitHub</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <img src="images/quran.PNG"  />
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">06/2025 – 08/2025</span>
+                            <h4>Pharmacy Management System</h4>
+                            <p class="role">Lead Architect (Remote)</p>
+                            <p>Architected a 14-module cross-platform system. Implemented RBAC and reduced UI
+                                duplication by 30%.</p>
+                        </div>
+                    </div>
 
-                    <p class="project-category">Holy Quran App</p>
-                    <strong class="project-title">
-                        <span>Flutter</span>
-                        <a href="https://github.com/bissan-sameeh/holyQuran" class="more-details" target="_blank">GitHub</a>
-                    </strong>
-                </div>
-            </div>
-          
-            <div class="project-card">
-                <div class="project-info">
-                    <img src="images/food_recipe.PNG" />
+                    <!-- Experience 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">02/2025 – 04/2025</span>
+                            <h4>PITS Company</h4>
+                            <p class="role">Flutter Intern</p>
+                            <p>Engineered offline-first capabilities using SQLite. Managed state with Bloc .</p>
+                        </div>
+                    </div>
 
-                    <p class="project-category">Food Recipe App</p>
-                    <strong class="project-title">
-                        <span>Flutter</span>
-                        <a href="https://github.com/bissan-sameeh/food_recipe_app" class="more-details" target="_blank">GitHub</a>
-                    </strong>
+                    <!-- Experience 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">05/2024 – 09/2024</span>
+                            <h4>Al-Hamss</h4>
+                            <p class="role">Flutter Intern</p>
+                            <p>Integrated REST APIs and Provider. Built performance tracking dashboards.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <img src="images/pailmail.png" />
-                    <p class="project-category">Consulting PalMail App</p>
-                    <strong class="project-title">
-                        <span>Flutter</span>
-                        <a href="https://github.com/bissan-sameeh/pailmail" class="more-details" target="_blank">GitHub</a>
-                    </strong>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+        </section>
 
-    <section class="cards contact" id="contact">
-        <h2 class="title">Let's Connect</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <p><a href="mailto:bissanqwaider@gmail.com">bissanqwaider@gmail.com</a></p>
-                                </div>
+        <section id="work" class="work-section">
+            <div class="container section-header">
+                <h2>02. SELECTED WORKS</h2>
+                <div class="line"></div>
             </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fab fa-github"></i>
-                </div>
-                <div class="info">
-                    <h3>GitHub</h3>
-                    <p><a href="https://github.com/bissan-sameeh">github.com/bissan-sameeh</a></p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p><a href="tel:+972567406735">+972 | 56 7406735</a></p>
-                </div>
-        </div>
-    </section>
 
-    <footer class="footer">
-        <p class="footer-title">&copy; <span>Bissan Qwaider</span> - All rights reserved</p>
-        <div class="credits">
-            <i class="fas fa-chevron-left"></i> Powered by passion <i class="fas fa-heart"></i>
-        </div>
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/bissan-qwaider-691181233"><i class="fab fa-linkedin"></i></a>
-            <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
-            <a href="https://www.instagram.com/eng.bissan_qwaider/"><i class="fab fa-instagram"></i></a>
-            <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+            <div class="work-navigation-container">
+                <button class="scroll-btn prev-btn" aria-label="Scroll Left">←</button>
+                <div class="horizontal-scroll-container">
+                    <div class="work-track">
+                        <!-- Project 1: Pharmacy / Captap -->
+                        <article class="project-card" data-image="captap_mokup.png">
+                            <div class="project-num">001</div>
+                            <div class="project-content">
+                                <h3>PHARMACY SYSTEM</h3>
+                                <p class="project-desc">Enterprise-grade management solution (CaptapApp).</p>
+                                <ul class="project-specs">
+                                    <li><strong>PLATFORM:</strong> Mobile / Tablet / Desktop</li>
+                                    <li><strong>STACK:</strong> Clean Arch, Bloc, RBAC</li>
+                                </ul>
+                                <a href="https://github.com/bissan-sameeh/CaptapApp" target="_blank"
+                                    class="btn-outline">VIEW CODE</a>
+                            </div>
+                        </article>
+
+                        <!-- Project 2: PalMail -->
+                        <article class="project-card" data-image="palMail.png">
+                            <div class="project-num">002</div>
+                            <div class="project-content">
+                                <h3>PALMAIL</h3>
+                                <p class="project-desc">Digital Mail Management System with role-based access.</p>
+                                <ul class="project-specs">
+                                    <li><strong>TECH:</strong> MVC, Provider, Localization</li>
+                                    <li><strong>FEATURES:</strong> View Mails, Categories, Status, Filtering, Roles</li>
+                                </ul>
+                                <a href="https://github.com/bissan-sameeh/pailmail" target="_blank"
+                                    class="btn-outline">VIEW
+                                    CODE</a>
+                            </div>
+                        </article>
+
+                        <!-- Project 3: Holy Quran -->
+                        <article class="project-card" data-image="quran-app.PNG">
+                            <div class="project-num">003</div>
+                            <div class="project-content">
+                                <h3>HOLY QURAN</h3>
+                                <p class="project-desc">Comprehensive Quran application with audio and translation.</p>
+                                <ul class="project-specs">
+                                    <li><strong>TECH:</strong> Audio Players, API Integration</li>
+                                    <li><strong>TYPE:</strong> Religious / Educational</li>
+                                </ul>
+                                <a href="https://github.com/bissan-sameeh/holyQuran" target="_blank"
+                                    class="btn-outline">VIEW
+                                    CODE</a>
+                            </div>
+                        </article>
+
+                        <!-- Project 4: Car Marketplace -->
+                        <article class="project-card" data-image="car4sale.png">
+                            <div class="project-num">004</div>
+                            <div class="project-content">
+                                <h3>CAR MARKETPLACE</h3>
+                                <p class="project-desc">Bi-directional marketplace for buyers and sellers.</p>
+                                <ul class="project-specs">
+                                    <li><strong>TECH:</strong> Provider, Stripe, Charts</li>
+                                    <li><strong>DATA:</strong> REST API, Analytics</li>
+                                </ul>
+                                <a href="https://github.com/bissan-sameeh/Car4Sales" target="_blank"
+                                    class="btn-outline">VIEW CODE</a>
+                            </div>
+                        </article>
+
+                        <!-- Project 5: Food Recipe -->
+                        <article class="project-card" data-image="food-mookup.PNG">
+                            <div class="project-num">005</div>
+                            <div class="project-content">
+                                <h3>FOOD RECIPE APP</h3>
+                                <p class="project-desc">Interactive recipe discovery and management app.</p>
+                                <ul class="project-specs">
+                                    <li><strong>TECH:</strong> Flutter, API Integration</li>
+                                    <li><strong>TYPE:</strong> Lifestyle / Utility</li>
+                                </ul>
+                                <a href="https://github.com/bissan-sameeh/food_recipe_app" target="_blank"
+                                    class="btn-outline">VIEW CODE</a>
+                            </div>
+                        </article>
+
+                        <!-- Project 6: Friends -->
+                        <article class="project-card" data-image="Friends.png">
+                            <div class="project-num">006</div>
+                            <div class="project-content">
+                                <h3>FRIENDS APP</h3>
+                                <p class="project-desc">Social connection and networking application.</p>
+                                <ul class="project-specs">
+                                    <li><strong>TECH:</strong> View Ui and Charts</li>
+                                    <li><strong>TYPE:</strong> Social Network</li>
+                                </ul>
+                                <a href="https://github.com/bissan-sameeh/Friends" target="_blank"
+                                    class="btn-outline">VIEW
+                                    CODE</a>
+                            </div>
+                        </article>
+
+                        <!-- Project 7: Betweener -->
+                        <article class="project-card" data-image="betweener_app.jpg">
+                            <div class="project-num">007</div>
+                            <div class="project-content">
+                                <h3>BETWEENER</h3>
+                                <p class="project-desc">Links-sharing and meeting point finder.</p>
+                                <ul class="project-specs">
+                                    <li><strong>TECH:</strong> Sharing Links, Add Friends, API</li>
+                                    <li><strong>TYPE:</strong> Utility / API</li>
+                                </ul>
+                                <a href="https://github.com/bissan-sameeh/Betweener_app" target="_blank"
+                                    class="btn-outline">VIEW CODE</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="scroll-btn next-btn" aria-label="Scroll Right">→</button>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section container">
+            <div class="section-header">
+                <h2>03. CONNECT</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <a href="mailto:bissanqwaider@gmail.com" class="big-link email-link">
+                    bissanqwaider<br>@gmail.com
+                </a>
+
+                <div class="social-links">
+                    <a href="https://github.com/bissan-sameeh" target="_blank">GITHUB <span>↗</span></a>
+                    <a href="https://www.linkedin.com/in/bissan-qwaider-691181233/" target="_blank">LINKEDIN
+                        <span>↗</span></a>
+                    <a href="https://bissan-portfolio.netlify.app" target="_blank">LIVE DEMO <span>↗</span></a>
+                </div>
+
+                <div class="location">
+                    <p>BASED IN GAZA</p>
+                    <p>AVAILABLE FOR REMOTE WORK</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 BISSAN QWAIDER. ENGINEERED WITH DART & SOUL.</p>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
+
+</html>
