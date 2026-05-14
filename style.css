@@ -89,6 +89,56 @@ a {
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.project-image-container {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .container {
     max-width: 1400px;
     /* Wider for more impact */
@@ -607,7 +657,7 @@ a {
     margin-bottom: 0;
 }
 
-/* Work Section (Horizontal Scroll) */
+/* Work Section (Responsive Grid) */
 .work-section {
     padding: var(--spacing-xl) 0;
     position: relative;
@@ -616,146 +666,83 @@ a {
     background: linear-gradient(to bottom, #050505, #080808);
 }
 
-.horizontal-scroll-container {
-    overflow-x: auto;
-    padding: var(--spacing-md) 0;
-    padding-left: max(var(--spacing-md), 50vw - 700px);
-    /* Center align start relative to container */
-    padding-right: var(--spacing-md);
-    scrollbar-width: none;
-}
-
-.horizontal-scroll-container::-webkit-scrollbar {
-    display: none;
-}
-
-.work-track {
-    display: flex;
-    gap: var(--spacing-md);
-    width: max-content;
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: stretch;
 }
 
 .project-card {
-    width: 450px;
-    background: #080808;
-    border: 1px solid var(--border-color);
-    padding: var(--spacing-md);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    height: 550px;
-    position: relative;
+    height: 100%;
+    border-radius: 20px;
     overflow: hidden;
-}
-
-/* Hover Effect for Card */
-.project-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Default dark gradient overlay */
-    background: radial-gradient(circle at top right, rgba(0, 176, 255, 0.1), transparent 60%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Background Image Layer */
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--project-bg);
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 0;
-    filter: brightness(0.4) grayscale(100%);
-    /* Start dark and gray */
+    text-decoration: none;
+    color: inherit;
+    background: #080808;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-15px);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 176, 255, 0.15);
     border-color: var(--accent-color);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
-.project-card:hover::after {
-    opacity: 1;
-    /* Show gradient overlay */
+.project-image-container {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* Reveal Image on Hover */
-.project-card:hover::before {
-    opacity: 1;
-    filter: brightness(0.6) grayscale(0%);
-    /* Colorize and brighten */
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
 }
 
-/* Ensure text stays readable above image */
-.project-content {
-    position: relative;
-    z-index: 2;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
-    /* Legibility gradient */
-    padding: var(--spacing-sm);
-    margin: -10px;
-    /* Offset padding */
-    border-radius: 8px;
-}
-
-.project-num {
-    font-family: var(--font-mono);
-    font-size: 4rem;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--border-color);
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
-
-.project-card:hover .project-num {
-    -webkit-text-stroke: 1px var(--accent-color);
-    opacity: 0.5;
+.project-card:hover .project-img {
+    transform: scale(1.05);
 }
 
 .project-content {
-    position: relative;
-    z-index: 2;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-content h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: var(--spacing-sm);
     color: #fff;
 }
 
 .project-desc {
-    font-size: 1rem;
+    font-size: 0.95rem;
     opacity: 0.7;
     margin-bottom: var(--spacing-md);
     font-family: var(--font-body);
+    flex-grow: 1;
 }
 
 .project-specs {
     list-style: none;
-    margin-bottom: var(--spacing-md);
-    border-top: 1px solid var(--border-color);
-    padding-top: var(--spacing-md);
+    margin-bottom: 0;
+    border-top: 1px solid var(--grid-line);
+    padding-top: var(--spacing-sm);
 }
 
 .project-specs li {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
-    margin-bottom: 8px;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
     display: flex;
 }
 
@@ -765,27 +752,18 @@ a {
     display: inline-block;
 }
 
-.btn-outline {
-    display: inline-block;
-    padding: 14px 28px;
-    border: 1px solid var(--border-color);
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    text-align: center;
-    transition: all 0.3s ease;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    font-weight: 500;
+@media (max-width: 992px) {
+    .work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
-.btn-outline:hover {
-    background: var(--accent-color);
-    color: #000;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 20px var(--accent-glow);
+@media (max-width: 768px) {
+    .work-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
+
 
 /* Contact Section */
 .contact-section {
